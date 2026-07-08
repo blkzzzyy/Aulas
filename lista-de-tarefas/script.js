@@ -2,7 +2,7 @@ let btnAddTask = document.getElementById("btn-add-task");
 let inputInsText = document.getElementById("input-ins-text");
 let table = document.querySelector("table");
 let cont = 0;
-const btnDeleteTask = document.getElementsByid("btn-delete-task");
+let btnDeleteTask = document.getElementById("btn-delete-task");
 
 
 btnAddTask.addEventListener("click", addtask);
@@ -37,11 +37,21 @@ function addtask()
 }
 
 btnDeleteTask.addEventListener("click", deleteTask);
-
+var rowtoDelete = "";
 
 function deleteTask()
 {
-    var rowToDelete = btnDeleteTask.parentElement.parentElement;
+    rowToDelete = btnDeleteTask.parentElement.parentElement;
     rowToDelete.remove();
 
+    rowtoDelete = "";
+
+    if(rowToDelete !== "") {
+
+    rowToDelete = "";
 }
+
+console.log(rowToDelete);
+
+}
+

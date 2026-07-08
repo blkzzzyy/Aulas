@@ -121,6 +121,13 @@ input#btn-delete-task {
     width: 100%;
 }
 
+input#btn-delete-task:hover
+{
+    
+    cursor: pointer;
+
+}
+
 input#btn-delete-task:before {
     background-color: #700000;
     display: flex;
