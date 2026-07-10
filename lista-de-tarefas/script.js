@@ -38,7 +38,7 @@ function deletetask(btn)
     console.log(row);
     row.remove();
     
-
+    console.log("aura + ego")
     row = "";
     btnDeleteTask = "";
 }
