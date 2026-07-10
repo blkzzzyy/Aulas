@@ -1,9 +1,7 @@
 let btnAddTask = document.getElementById("btn-add-task");
 let inputInsText = document.getElementById("input-ins-text");
-let table = document.querySelector("table");
+let table = document.querySelector("tbody");
 let cont = 0;
-let btnDeleteTask = document.getElementById("btn-delete-task");
-
 
 btnAddTask.addEventListener("click", addtask);
 
@@ -21,7 +19,7 @@ function addtask()
     columTaskNumber.textContent = cont;
     columTask.textContent = inputInsTextValue;
     columTaskCompleted.innerHTML = '<input type="checkbox" name="check-completed" id="check-completed">';
-    columTaskOptions.innerHTML = '<input type="button" value="❌" id="btn-delete-task" class="btn-delete-task">';
+    columTaskOptions.innerHTML = '<button onclick="deletetask(this)" id="btn-delete-task" class="btn-delete-task">❌</button>';
 
     newRow.appendChild(columTaskNumber);
     newRow.appendChild(columTask);
@@ -31,24 +29,16 @@ function addtask()
     table.appendChild(newRow);
 
     inputInsText.value = "";
+}
 
-    console.log("Aura + Ego 67 ");
-if( cont > 0){
-btnDeleteTask.addEventListener("click", deleteTask);
-var rowtoDelete = "";
-
-function deleteTask()
+function deletetask(btn)
 {
-    rowToDelete = btnDeleteTask.parentElement.parentElement;
-    rowToDelete.remove();
+    
+    let row = btn.parentNode.parentNode;
+    console.log(row);
+    row.remove();
+    
 
-    rowtoDelete = "";
-
-    if(rowToDelete !== "") {
-
-    rowToDelete = "";
-}
-
-console.log(rowToDelete);
-}
+    row = "";
+    btnDeleteTask = "";
 }

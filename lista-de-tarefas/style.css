@@ -19,6 +19,21 @@ div.div-ins-text {
     align-items: center;
     height: 10vh;
     width: 100%;
+    outline: 0;
+    padding: 0;
+}
+
+div.div-ins-text:focus {
+    outline: 0;
+    border: none;
+
+}
+
+
+
+div.div-ins-text input.input-ins-text:focus {
+    outline: 0;
+    border: none;
 }
 
 div.div-ins-text .container {
@@ -38,6 +53,8 @@ div.div-ins-text .container {
     height: 50%;
     border: none;
     border-radius: 15px 0 0px 15px;
+    padding: 0 0 0 5px;
+
 }
 
 .container input#btn-add-task {
@@ -113,7 +130,7 @@ table td{
     border-top: 1px solid #700000;
 }
 
-input#btn-delete-task {
+button#btn-delete-task {
     background-color: #8d0000;
     border: none;
     color: #fff;
@@ -121,7 +138,7 @@ input#btn-delete-task {
     width: 100%;
 }
 
-input#btn-delete-task:hover
+button#btn-delete-task:hover
 {
     
     cursor: pointer;
