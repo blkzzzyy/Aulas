@@ -33,9 +33,7 @@ function addtask()
     inputInsText.value = "";
 
     console.log("Aura + Ego 67 ");
-
-}
-
+if( cont > 0){
 btnDeleteTask.addEventListener("click", deleteTask);
 var rowtoDelete = "";
 
@@ -52,6 +50,5 @@ function deleteTask()
 }
 
 console.log(rowToDelete);
-
 }
-
+}
